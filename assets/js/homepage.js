@@ -57,7 +57,7 @@ const buildTheStore = (arrayObjs) => {
                 <h5 class="card-title">${singleObj.name}</h5>
                 <h5 class="card-title">${singleObj.brand}</h5>
                 <p class="card-text">${singleObj.description}</p>
-                <p class="card-text">${singleObj.price} €</p>
+                <p class="card-text fs-2">${singleObj.price} €</p>
                 <div>
                 <a href="./phone-details.html"><button type="button" class="btn success-modify text-light w-50 moreInfo mb-2"> Scopri di più </button></a>
                 <button type="button" class="btn primary-modify text-light w-50 moreInfo"> Modifica Item </button>
