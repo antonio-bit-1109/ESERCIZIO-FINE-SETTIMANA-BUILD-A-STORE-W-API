@@ -74,12 +74,12 @@ const getRequest = (URL, id) => {
         })
         .then((obj) => {
             console.log(obj); /* Qui ho l'obj selezionato dall'Id */
-            modifyProp(obj);
+            modifyPropObj(obj, id);
         })
         .catch((error) => console.log("PROBLEMA NELLA GET", error));
 };
 
-const modifyProp = (obj) => {
+const modifyPropObj = (obj, id) => {
     const name = document.getElementById("name");
     name.value = obj.name;
 
@@ -105,11 +105,11 @@ const modifyProp = (obj) => {
     sottotitoloPage.textContent = "modifica-Oggetto";
 
     btn_backOffice.addEventListener("click", () => {
-        putRequest(name, description, brand, price, indirizzoImg);
+        putRequest(id, name, description, brand, price, indirizzoImg);
     });
 };
 
-const putRequest = (name, description, brand, price, indirizzoImg) => {
+const putRequest = (id, name, description, brand, price, indirizzoImg) => {
     fetch(URL + id, {
         method: "PUT",
         headers: {
@@ -117,7 +117,7 @@ const putRequest = (name, description, brand, price, indirizzoImg) => {
             authorization:
                 "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTcxY2JhMDBkOGEyMDAwMThhNDhhNDAiLCJpYXQiOjE3MDE5NTY1MTIsImV4cCI6MTcwMzE2NjExMn0.xs47A595YQnVKzRty8Y-lGk4pGGqTQGMcCmqVCfeSIY",
         },
-        body: json.stringify({
+        body: JSON.stringify({
             name: name,
             description: description,
             brand: brand,
