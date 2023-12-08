@@ -16,6 +16,9 @@ window.addEventListener("DOMContentLoaded", () => {
             event.preventDefault();
             postRequest();
             form.reset();
+            setTimeout(() => {
+                window.location.href = "homepage.html";
+            }, 1200);
         });
     }
 });
