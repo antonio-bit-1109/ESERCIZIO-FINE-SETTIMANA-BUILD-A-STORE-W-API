@@ -11018,7 +11018,7 @@ textarea.form-control-lg {
 }
 .img-prop {
   object-fit: cover;
-  max-width: 200px;
+  max-width: 300px;
   height: auto;
 }
 
@@ -11055,7 +11055,7 @@ body #main-container #main-row .col .this {
 }
 @media screen and (min-width: 1px) {
   body #main-container #main-row .col .this .terzoDiv {
-    width: 90% !important;
+    width: 100% !important;
   }
 }
 @media screen and (min-width: 992px) {

@@ -2,7 +2,7 @@
 
 .img-prop {
     object-fit: cover;
-    max-width: 200px;
+    max-width: 300px;
     height: auto;
 }
 
@@ -90,7 +90,7 @@ body {
                     height: 100% !important;
                     .terzoDiv {
                         @media screen and (min-width: 1px) {
-                            width: 90% !important;
+                            width: 100% !important;
                         }
                         @media screen and (min-width: 992px) {
                             width: 25% !important;
