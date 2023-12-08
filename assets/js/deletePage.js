@@ -52,7 +52,7 @@ const deleteTheItem = (selectedObj, id) => {
     btnConfirmDelete.addEventListener("click", () => {
         confirmDeleting(id);
         setTimeout(() => {
-            window.location.href = "homepage.html?alertId=100";
+            window.location.href = "homepage.html?alertId=100"; /* me lo riporta in homepage con alertId?? */
         }, 1200);
     });
 };
