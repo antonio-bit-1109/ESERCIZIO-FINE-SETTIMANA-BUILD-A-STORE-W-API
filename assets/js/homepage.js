@@ -56,10 +56,10 @@ const buildTheStore = (arrayObjs) => {
                             <div class="h-100">
                                 <img src="${singleObj.imageUrl}" class="card-img-top p-3 img-prop" alt="cellulare">
                             </div>
-                            <div class=" d-flex flex-column justify-content-center h-100 p-3">
-                                <h5 class="card-title">${singleObj.name}</h5>
+                            <div class=" d-flex flex-column justify-content-center h-100 p-3 max-w-200 max-h-400">
+                                <h4 class="card-title">${singleObj.name}</h4>
                                 <h5 class="card-title">${singleObj.brand}</h5>
-                                <p class="card-text mt-1">${singleObj.description}</p>
+                                <p class="card-text mt-1 overflow-auto">${singleObj.description}</p>
                                 <p class="card-text text-primary fw-bold fs-1">${singleObj.price} €</p>
                             </div>
                             <div class="p-2 d-flex flex-column terzoDiv h-100 justify-content-center">

@@ -55,7 +55,7 @@ const createInfoPage = (GETobj) => {
         <h3 class="list-group-item fs-5">${GETobj.brand}</h3>
         <h1 class="list-group-item fs-2">${GETobj.name}</h1>
         <h3 class="list-group-item fs-4">${GETobj.description}</h3>
-        <h2 class="list-group-item text-primary display-2">${GETobj.price} &#8364; </h2>
+        <h2 class="list-group-item text-primary display-2 fw-bold">${GETobj.price} &#8364; </h2>
         <div>
             <h4> Informazioni dal Server </h4>
             <p> creato il: <span class="text-secondary fw-bold"> ${new Date(

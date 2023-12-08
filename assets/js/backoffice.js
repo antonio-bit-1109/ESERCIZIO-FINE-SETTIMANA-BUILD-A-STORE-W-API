@@ -1,11 +1,23 @@
 window.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("form");
+    const URL = "https://striveschool-api.herokuapp.com/api/product/";
 
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        postRequest();
-        form.reset();
-    });
+    const params = new URLSearchParams(window.location.search);
+    console.log("params", params);
+
+    const id = params.get("resourseId");
+    console.log(" id ", id);
+
+    if (id) {
+        putRequest();
+    } else {
+        const form = document.getElementById("form");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            postRequest();
+            form.reset();
+        });
+    }
 });
 
 const postRequest = () => {
@@ -43,3 +55,5 @@ const postRequest = () => {
         })
         .catch((error) => console.log("AMICO MIO, GUAI IN VISTA CON ", error));
 };
+
+const putRequest = () => {};

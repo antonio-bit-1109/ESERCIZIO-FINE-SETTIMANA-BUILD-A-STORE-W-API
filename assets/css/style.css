@@ -11043,6 +11043,14 @@ textarea.form-control-lg {
   max-height: 400px;
 }
 
+.max-w-200 {
+  max-width: 200px;
+}
+
+.max-h-400 {
+  max-height: 400px;
+}
+
 .primary-modify {
   background: rgb(2, 0, 36);
   background: -moz-linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(65, 214, 130) 0%, rgb(237, 57, 212) 0%, rgb(13, 110, 253) 0%, rgb(136, 183, 252) 0%, rgb(5, 106, 255) 100%);
