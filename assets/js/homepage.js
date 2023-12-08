@@ -53,17 +53,17 @@ const buildTheStore = (arrayObjs) => {
         col.innerHTML += `
                     <div class="this">
                         <div class= "d-flex justify-content-center align-items-center h-100 w-100">  
-                            <div class="border border-end-0 h-100">
+                            <div class="h-100">
                                 <img src="${singleObj.imageUrl}" class="card-img-top p-3 img-prop" alt="cellulare">
                             </div>
-                            <div class=" d-flex flex-column justify-content-center border border-start-0 border-end-0 h-100 p-3">
+                            <div class=" d-flex flex-column justify-content-center h-100 p-3">
                                 <h5 class="card-title">${singleObj.name}</h5>
                                 <h5 class="card-title">${singleObj.brand}</h5>
                                 <p class="card-text mt-1">${singleObj.description}</p>
                                 <p class="card-text text-primary fw-bold fs-1">${singleObj.price} €</p>
                             </div>
-                            <div class="p-2 d-flex flex-column terzoDiv border border-start-0 h-100 justify-content-center">
-                                <a href="./phone-details.html"><button type="button" class="btn success-modify text-light w-50 moreInfo mb-2"> Scopri di più </button></a>
+                            <div class="p-2 d-flex flex-column terzoDiv h-100 justify-content-center">
+                                <a href="./phone-details.html?resourseId=${singleObj._id}"><button type="button" class="btn success-modify text-light w-50 moreInfo mb-2"> Scopri di più </button></a>
                                 <button type="button" class="btn primary-modify text-light w-50 moreInfo"> Modifica Item </button>
                             </div>
                         </div>
