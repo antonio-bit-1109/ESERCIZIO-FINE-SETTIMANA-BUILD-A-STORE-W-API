@@ -51,6 +51,26 @@ const buildTheStore = (arrayObjs) => {
         row.appendChild(col);
 
         col.innerHTML += `
+                    <div class="this">
+                        <div class= "d-flex justify-content-center align-items-center">  
+                            <div class="border">
+                                <img src="${singleObj.imageUrl}" class="card-img-top p-3 img-prop" alt="cellulare">
+                            </div>
+                            <div class=" d-flex flex-column border">
+                                <h5 class="card-title">${singleObj.name}</h5>
+                                <h5 class="card-title">${singleObj.brand}</h5>
+                                <p class="card-text">${singleObj.description}</p>
+                                <p class="card-text text-primary fw-bold fs-1">${singleObj.price} €</p>
+                            </div>
+                            <div class="m-2 d-flex flex-column w-75 terzoDiv border">
+                                <a href="./phone-details.html"><button type="button" class="btn success-modify text-light w-50 moreInfo mb-2"> Scopri di più </button></a>
+                                <button type="button" class="btn primary-modify text-light w-50 moreInfo"> Modifica Item </button>
+                            </div>
+                        </div>
+                    </div>
+        `;
+
+        /*  `
         <div class="card h-100 rounded-5 border-primary border-3">
             <img src="${singleObj.imageUrl}" class="card-img-top p-3 img-prop" alt="cellulare">
             <div class="card-body d-flex flex-column justify-content-end">
@@ -64,6 +84,6 @@ const buildTheStore = (arrayObjs) => {
                 </div>
             </div>
         </div>
-        `;
+        `; */
     }
 };

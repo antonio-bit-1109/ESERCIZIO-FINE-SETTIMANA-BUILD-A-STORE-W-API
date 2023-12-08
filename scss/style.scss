@@ -1,8 +1,8 @@
 @import "./overrrides";
 
 .img-prop {
-    object-fit: fill;
-    height: 50%;
+    object-fit: cover;
+    max-width: 200px;
 }
 
 .z-index-nav {
@@ -79,4 +79,23 @@
         rgba(25, 135, 84, 1) 100%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#198754",GradientType=1);
+}
+
+body {
+    #main-container {
+        #main-row {
+            .col {
+                .this {
+                    .terzoDiv {
+                        @media screen and (min-width: 1px) {
+                            width: 90% !important;
+                        }
+                        @media screen and (min-width: 992px) {
+                            width: 25% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

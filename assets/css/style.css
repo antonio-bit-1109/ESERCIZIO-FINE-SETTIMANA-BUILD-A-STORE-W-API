@@ -11017,8 +11017,8 @@ textarea.form-control-lg {
   }
 }
 .img-prop {
-  object-fit: fill;
-  height: 50%;
+  object-fit: cover;
+  max-width: 200px;
 }
 
 .z-index-nav {
@@ -11047,4 +11047,15 @@ textarea.form-control-lg {
   background: -webkit-linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(65, 214, 130) 0%, rgb(237, 57, 212) 0%, rgb(13, 110, 253) 0%, rgb(132, 207, 172) 0%, rgb(25, 135, 84) 100%);
   background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(65, 214, 130) 0%, rgb(237, 57, 212) 0%, rgb(13, 110, 253) 0%, rgb(132, 207, 172) 0%, rgb(25, 135, 84) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#198754",GradientType=1);
+}
+
+@media screen and (min-width: 1px) {
+  body #main-container #main-row .col .this .terzoDiv {
+    width: 90% !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  body #main-container #main-row .col .this .terzoDiv {
+    width: 25% !important;
+  }
 }/*# sourceMappingURL=style.css.map */
