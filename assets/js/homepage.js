@@ -52,38 +52,22 @@ const buildTheStore = (arrayObjs) => {
 
         col.innerHTML += `
                     <div class="this">
-                        <div class= "d-flex justify-content-center align-items-center">  
-                            <div class="border">
+                        <div class= "d-flex justify-content-center align-items-center h-100">  
+                            <div class="border border-end-0 h-100">
                                 <img src="${singleObj.imageUrl}" class="card-img-top p-3 img-prop" alt="cellulare">
                             </div>
-                            <div class=" d-flex flex-column border">
+                            <div class=" d-flex flex-column border border-start-0 border-end-0 h-100 p-3">
                                 <h5 class="card-title">${singleObj.name}</h5>
                                 <h5 class="card-title">${singleObj.brand}</h5>
                                 <p class="card-text">${singleObj.description}</p>
                                 <p class="card-text text-primary fw-bold fs-1">${singleObj.price} €</p>
                             </div>
-                            <div class="m-2 d-flex flex-column terzoDiv border">
+                            <div class="p-2 d-flex flex-column terzoDiv border border-start-0 h-100 justify-content-center">
                                 <a href="./phone-details.html"><button type="button" class="btn success-modify text-light w-50 moreInfo mb-2"> Scopri di più </button></a>
                                 <button type="button" class="btn primary-modify text-light w-50 moreInfo"> Modifica Item </button>
                             </div>
                         </div>
                     </div>
-        `;
-
-        /*  `
-        <div class="card h-100 rounded-5 border-primary border-3">
-            <img src="${singleObj.imageUrl}" class="card-img-top p-3 img-prop" alt="cellulare">
-            <div class="card-body d-flex flex-column justify-content-end">
-                <h5 class="card-title">${singleObj.name}</h5>
-                <h5 class="card-title">${singleObj.brand}</h5>
-                <p class="card-text">${singleObj.description}</p>
-                <p class="card-text fs-2">${singleObj.price} €</p>
-                <div>
-                <a href="./phone-details.html"><button type="button" class="btn success-modify text-light w-50 moreInfo mb-2"> Scopri di più </button></a>
-                <button type="button" class="btn primary-modify text-light w-50 moreInfo"> Modifica Item </button>
-                </div>
-            </div>
-        </div>
-        `; */
+                    `;
     }
 };
