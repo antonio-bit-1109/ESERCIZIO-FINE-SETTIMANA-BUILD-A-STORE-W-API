@@ -11067,6 +11067,14 @@ textarea.form-control-lg {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#198754",GradientType=1);
 }
 
+.danger-modify {
+  background: rgb(2, 0, 36);
+  background: -moz-linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(255, 38, 139) 0%, rgb(237, 57, 212) 0%, rgb(13, 110, 253) 0%, rgb(233, 123, 123) 0%, rgb(241, 9, 9) 100%);
+  background: -webkit-linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(255, 38, 139) 0%, rgb(237, 57, 212) 0%, rgb(13, 110, 253) 0%, rgb(233, 123, 123) 0%, rgb(241, 9, 9) 100%);
+  background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(255, 38, 139) 0%, rgb(237, 57, 212) 0%, rgb(13, 110, 253) 0%, rgb(233, 123, 123) 0%, rgb(241, 9, 9) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#f10909",GradientType=1);
+}
+
 body #main-container #main-row .col .this {
   height: 100% !important;
 }

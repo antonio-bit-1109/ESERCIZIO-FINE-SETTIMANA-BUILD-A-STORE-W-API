@@ -106,23 +106,27 @@ const modifyPropObj = (obj, id) => {
 
     btn_backOffice.addEventListener("click", () => {
         putRequest(id, name, description, brand, price, indirizzoImg);
+        cleanInputFields(name, description, brand, price, indirizzoImg);
     });
 };
 
 const putRequest = (id, name, description, brand, price, indirizzoImg) => {
+    const URL = "https://striveschool-api.herokuapp.com/api/product/";
+
     fetch(URL + id, {
         method: "PUT",
         headers: {
-            "content-type": "application/json",
             authorization:
                 "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTcxY2JhMDBkOGEyMDAwMThhNDhhNDAiLCJpYXQiOjE3MDE5NTY1MTIsImV4cCI6MTcwMzE2NjExMn0.xs47A595YQnVKzRty8Y-lGk4pGGqTQGMcCmqVCfeSIY",
+
+            "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            name: name,
-            description: description,
-            brand: brand,
-            price: price,
-            imageUrl: indirizzoImg,
+            name: name.value,
+            description: description.value,
+            brand: brand.value,
+            price: price.value,
+            imageUrl: indirizzoImg.value,
         }),
     })
         .then((response) => {
@@ -132,5 +136,15 @@ const putRequest = (id, name, description, brand, price, indirizzoImg) => {
         })
         .then((updatedObj) => {
             console.log(updatedObj);
-        });
+        })
+
+        .catch((error) => console.log(error));
+};
+
+const cleanInputFields = (name, description, brand, price, indirizzoImg) => {
+    name.value = "";
+    description.value = "";
+    brand.value = "";
+    price.value = "";
+    indirizzoImg.value = "";
 };

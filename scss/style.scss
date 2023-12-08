@@ -99,6 +99,38 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#198754",GradientType=1);
 }
 
+.danger-modify {
+    background: rgb(2, 0, 36);
+    background: -moz-linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(255, 38, 139, 1) 0%,
+        rgba(237, 57, 212, 1) 0%,
+        rgba(13, 110, 253, 1) 0%,
+        rgba(233, 123, 123, 1) 0%,
+        rgba(241, 9, 9, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(255, 38, 139, 1) 0%,
+        rgba(237, 57, 212, 1) 0%,
+        rgba(13, 110, 253, 1) 0%,
+        rgba(233, 123, 123, 1) 0%,
+        rgba(241, 9, 9, 1) 100%
+    );
+    background: linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(255, 38, 139, 1) 0%,
+        rgba(237, 57, 212, 1) 0%,
+        rgba(13, 110, 253, 1) 0%,
+        rgba(233, 123, 123, 1) 0%,
+        rgba(241, 9, 9, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#f10909",GradientType=1);
+}
+
 body {
     #main-container {
         #main-row {
