@@ -63,7 +63,60 @@
                             <input id="imgURL" type="text" class="form-control" required />
                         </div>
 
-                        <button id="btn-backOffice" type="submit" class="btn btn-primary">Invia Dati</button>
+                        <button
+                            id="btn-delete"
+                            type="button"
+                            class="btn danger-modify text-light"
+                            data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop"
+                        >
+                            Cancella Item
+                        </button>
+                        <!-- Modal -->
+                        <div
+                            class="modal fade"
+                            id="staticBackdrop"
+                            data-bs-backdrop="static"
+                            data-bs-keyboard="false"
+                            tabindex="-1"
+                            aria-labelledby="staticBackdropLabel"
+                            aria-hidden="true"
+                        >
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                                            Cliccando su Si eliminerai definitivamente questo oggetto, vuoi procedere?
+                                        </h1>
+                                        <button
+                                            type="button"
+                                            class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"
+                                        ></button>
+                                    </div>
+                                    <div class="modal-body">...</div>
+                                    <div class="modal-footer">
+                                        <a href="./homepage.html"
+                                            ><button
+                                                type="button"
+                                                class="btn success-modify text-light"
+                                                data-bs-dismiss="modal"
+                                            >
+                                                No, riportami indietro
+                                            </button></a
+                                        >
+                                        <button
+                                            onclick="deleteItemSurely()"
+                                            type="button"
+                                            class="btn danger-modify text-light"
+                                        >
+                                            Si, Cancella!
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

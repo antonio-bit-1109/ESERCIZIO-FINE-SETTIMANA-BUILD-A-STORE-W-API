@@ -107,7 +107,9 @@ const modifyPropObj = (obj, id) => {
     btn_backOffice.addEventListener("click", () => {
         putRequest(id, name, description, brand, price, indirizzoImg);
         cleanInputFields(name, description, brand, price, indirizzoImg);
-        window.location.href = "homepage.html";
+        setTimeout(() => {
+            window.location.href = "homepage.html";
+        }, 2000);
     });
 };
 
