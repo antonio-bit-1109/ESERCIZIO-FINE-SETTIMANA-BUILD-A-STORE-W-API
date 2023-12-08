@@ -67,7 +67,8 @@ const createInfoPage = (GETobj) => {
             <p> id prodotto: <span class="text-secondary fw-bold">${GETobj._id}</span></p>
         </div>
         <div>
-        <button class="btn primary-modify text-light"> Modifica Dettagli </button>
+        <a href="./backoffice.html?resourseId=${GETobj._id}">
+        <button class="btn primary-modify text-light"> Modifica Dettagli </button></a>
         </div>
     </div>`;
 };
