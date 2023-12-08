@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
         })
         .then((selectedObj) => {
             deleteTheItem(selectedObj);
-            deleteItemSurely(selectedObj);
+            /* deleteItemSurely(selectedObj); */
         })
         .catch((error) => {
             console.error(error);
@@ -47,3 +47,12 @@ const deleteTheItem = (selectedObj) => {
     const imgURLInput = document.getElementById("imgURL");
     imgURLInput.value = selectedObj.imageUrl;
 };
+/* prendi i valori negli input e crea una DELETE request al click del bottone "si" nel modale  */
+
+/* const deleteItemSurely = (selectedObj) => {
+    const confirmDeletebtn = document.getElementById("btn-ConfirmDelete");
+
+    confirmDeletebtn.addEventListener("click", () => {
+        console.log("ciao");
+    });
+}; */
