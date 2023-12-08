@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
             }
         })
         .then((selectedObj) => {
-            deleteTheItem(selectedObj);
+            deleteTheItem(selectedObj, id);
             /* deleteItemSurely(selectedObj); */
         })
         .catch((error) => {
@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
         });
 });
 
-const deleteTheItem = (selectedObj) => {
+const deleteTheItem = (selectedObj, id) => {
     console.log(selectedObj);
 
     const nameInput = document.getElementById("name");
@@ -46,13 +46,37 @@ const deleteTheItem = (selectedObj) => {
 
     const imgURLInput = document.getElementById("imgURL");
     imgURLInput.value = selectedObj.imageUrl;
-};
-/* prendi i valori negli input e crea una DELETE request al click del bottone "si" nel modale  */
 
-/* const deleteItemSurely = (selectedObj) => {
-    const confirmDeletebtn = document.getElementById("btn-ConfirmDelete");
+    const btnConfirmDelete = document.getElementById("btn-ConfirmDelete");
 
-    confirmDeletebtn.addEventListener("click", () => {
-        console.log("ciao");
+    btnConfirmDelete.addEventListener("click", () => {
+        confirmDeleting(id);
+        setTimeout(() => {
+            window.location.href = "homepage.html";
+        }, 2000);
     });
-}; */
+};
+
+const confirmDeleting = (id) => {
+    URL = "https://striveschool-api.herokuapp.com/api/product/";
+
+    fetch(URL + id, {
+        method: "DELETE",
+        headers: {
+            authorization:
+                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTcxY2JhMDBkOGEyMDAwMThhNDhhNDAiLCJpYXQiOjE3MDE5NTY1MTIsImV4cCI6MTcwMzE2NjExMn0.xs47A595YQnVKzRty8Y-lGk4pGGqTQGMcCmqVCfeSIY",
+            "content-type": "application/json",
+        },
+    })
+        .then((response) => {
+            response.json();
+        })
+        .then((response) => {
+            if (response.ok) {
+                console.log(response);
+            }
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+};
