@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", () => {
     console.log(" id ", id);
 
     if (id) {
-        putRequest();
+        getRequest(URL, id);
     } else {
         const form = document.getElementById("form");
 
@@ -56,4 +56,81 @@ const postRequest = () => {
         .catch((error) => console.log("AMICO MIO, GUAI IN VISTA CON ", error));
 };
 
-const putRequest = () => {};
+const getRequest = (URL, id) => {
+    fetch(URL + id, {
+        method: "GET",
+        headers: {
+            "content-type": "application/json",
+            authorization:
+                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTcxY2JhMDBkOGEyMDAwMThhNDhhNDAiLCJpYXQiOjE3MDE5NTY1MTIsImV4cCI6MTcwMzE2NjExMn0.xs47A595YQnVKzRty8Y-lGk4pGGqTQGMcCmqVCfeSIY",
+        },
+    })
+        .then((response) => {
+            console.log(response);
+
+            if (response.ok) {
+                return response.json();
+            }
+        })
+        .then((obj) => {
+            console.log(obj); /* Qui ho l'obj selezionato dall'Id */
+            modifyProp(obj);
+        })
+        .catch((error) => console.log("PROBLEMA NELLA GET", error));
+};
+
+const modifyProp = (obj) => {
+    const name = document.getElementById("name");
+    name.value = obj.name;
+
+    const description = document.getElementById("description");
+    description.value = obj.description;
+
+    const brand = document.getElementById("brand");
+    brand.value = obj.brand;
+
+    const price = document.getElementById("price");
+    price.value = obj.price;
+
+    const indirizzoImg = document.getElementById("imgURL");
+    indirizzoImg.value = obj.imageUrl;
+
+    const btn_backOffice = document.getElementById("btn-backOffice");
+    btn_backOffice.classList.add("btn-success");
+    btn_backOffice.textContent = "modifica Informazioni";
+    btn_backOffice.type = "button";
+    console.log(btn_backOffice);
+
+    const sottotitoloPage = document.getElementById("sottotitolo");
+    sottotitoloPage.textContent = "modifica-Oggetto";
+
+    btn_backOffice.addEventListener("click", () => {
+        putRequest(name, description, brand, price, indirizzoImg);
+    });
+};
+
+const putRequest = (name, description, brand, price, indirizzoImg) => {
+    fetch(URL + id, {
+        method: "PUT",
+        headers: {
+            "content-type": "application/json",
+            authorization:
+                "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTcxY2JhMDBkOGEyMDAwMThhNDhhNDAiLCJpYXQiOjE3MDE5NTY1MTIsImV4cCI6MTcwMzE2NjExMn0.xs47A595YQnVKzRty8Y-lGk4pGGqTQGMcCmqVCfeSIY",
+        },
+        body: json.stringify({
+            name: name,
+            description: description,
+            brand: brand,
+            price: price,
+            imageUrl: indirizzoImg,
+        }),
+    })
+        .then((response) => {
+            if (response.status >= 200 && response.status < 300) {
+                return response.json();
+            }
+        })
+        .then((updatedObj) => {
+            console.log(updatedObj);
+        });
+};
