@@ -64,7 +64,7 @@ const buildTheStore = (arrayObjs) => {
                             </div>
                             <div class="p-2 d-flex flex-column terzoDiv h-100 justify-content-center">
                                 <a href="./phone-details.html?resourseId=${singleObj._id}"><button type="button" class="btn success-modify text-light w-50 moreInfo mb-2"> Scopri di più </button></a>
-                                <button type="button" class="btn danger-modify text-light w-50 moreInfo"> Cancella Item </button>
+                                <a href="./deletePage.html?resourseId=${singleObj._id}"><button type="button" class="btn danger-modify text-light w-50 moreInfo"> Cancella Item </button></a>
                             </div>
                         </div>
                     </div>

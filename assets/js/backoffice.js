@@ -97,7 +97,7 @@ const modifyPropObj = (obj, id) => {
 
     const btn_backOffice = document.getElementById("btn-backOffice");
     btn_backOffice.classList.add("btn-success");
-    btn_backOffice.textContent = "modifica Informazioni";
+    btn_backOffice.textContent = "modifica Informazioni e Invia";
     btn_backOffice.type = "button";
     console.log(btn_backOffice);
 
@@ -107,6 +107,7 @@ const modifyPropObj = (obj, id) => {
     btn_backOffice.addEventListener("click", () => {
         putRequest(id, name, description, brand, price, indirizzoImg);
         cleanInputFields(name, description, brand, price, indirizzoImg);
+        window.location.href = "homepage.html";
     });
 };
 
