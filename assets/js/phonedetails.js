@@ -50,7 +50,7 @@ const createInfoPage = (GETobj) => {
 
     const infoBox = document.getElementById("infoBox");
     infoBox.innerHTML += `
-
+    
     <div>
         <h3 class="list-group-item fs-5">${GETobj.brand}</h3>
         <h1 class="list-group-item fs-2">${GETobj.name}</h1>
@@ -58,9 +58,16 @@ const createInfoPage = (GETobj) => {
         <h2 class="list-group-item text-primary display-2">${GETobj.price} &#8364; </h2>
         <div>
             <h4> Informazioni dal Server </h4>
-            <p>${GETobj.updatedAt}</p>
-            <p>${GETobj.createdAt}</p>
-            <p>${GETobj._id}</p>
+            <p> creato il: <span class="text-secondary fw-bold"> ${new Date(
+                GETobj.createdAt
+            ).toLocaleDateString()}</span></p>
+            <p>modificato il: <span class="text-secondary fw-bold"> ${new Date(
+                GETobj.updatedAt
+            ).toLocaleDateString()}</span></p>
+            <p> id prodotto: <span class="text-secondary fw-bold">${GETobj._id}</span></p>
+        </div>
+        <div>
+        <button class="btn primary-modify text-light"> Modifica Dettagli </button>
         </div>
     </div>`;
 };
