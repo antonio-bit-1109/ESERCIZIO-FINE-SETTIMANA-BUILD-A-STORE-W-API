@@ -47,4 +47,20 @@ const createInfoPage = (GETobj) => {
     imgProduct.src = GETobj.imageUrl;
     imgProduct.classList.add("aspect-details");
     imgBox.appendChild(imgProduct);
+
+    const infoBox = document.getElementById("infoBox");
+    infoBox.innerHTML += `
+
+    <div>
+        <h3 class="list-group-item fs-5">${GETobj.brand}</h3>
+        <h1 class="list-group-item fs-2">${GETobj.name}</h1>
+        <h3 class="list-group-item fs-4">${GETobj.description}</h3>
+        <h2 class="list-group-item text-primary display-2">${GETobj.price} &#8364; </h2>
+        <div>
+            <h4> Informazioni dal Server </h4>
+            <p>${GETobj.updatedAt}</p>
+            <p>${GETobj.createdAt}</p>
+            <p>${GETobj._id}</p>
+        </div>
+    </div>`;
 };
