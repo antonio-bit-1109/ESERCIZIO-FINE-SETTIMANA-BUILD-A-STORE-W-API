@@ -112,7 +112,7 @@ const modifyPropObj = (obj, id) => {
         cleanInputFields(name, description, brand, price, indirizzoImg);
         setTimeout(() => {
             window.location.href = "homepage.html";
-        }, 2000);
+        }, 1200);
     });
 };
 

@@ -52,8 +52,8 @@ const deleteTheItem = (selectedObj, id) => {
     btnConfirmDelete.addEventListener("click", () => {
         confirmDeleting(id);
         setTimeout(() => {
-            window.location.href = "homepage.html";
-        }, 2000);
+            window.location.href = "homepage.html?alertId=100";
+        }, 1200);
     });
 };
 

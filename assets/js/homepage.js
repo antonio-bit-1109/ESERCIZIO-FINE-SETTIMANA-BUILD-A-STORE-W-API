@@ -1,5 +1,16 @@
 window.addEventListener("DOMContentLoaded", () => {
-    getRequest();
+    const params = new URLSearchParams(window.location.search);
+    console.log("params", params);
+
+    const id = params.get("alertId");
+    console.log(" id ", id);
+
+    if (id === "100") {
+        triggerModal(); /* avviare il modale all ritorno alla homepage ??  */
+        getRequest();
+    } else {
+        getRequest();
+    }
 });
 
 const getRequest = () => {
@@ -73,4 +84,10 @@ const buildTheStore = (arrayObjs) => {
                     </div>
                     `;
     }
+};
+
+const triggerModal = () => {
+    setTimeout(() => {
+        alert("L'item è stato correttamente eliminato.");
+    }, 1000);
 };
