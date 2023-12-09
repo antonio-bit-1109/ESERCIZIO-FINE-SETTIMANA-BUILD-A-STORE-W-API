@@ -132,7 +132,7 @@ body {
         #main-row {
             .col {
                 .this {
-                    p {
+                    p:not(.prezzo) {
                         font-size: larger;
                     }
                     .secondoDiv {
