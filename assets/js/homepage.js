@@ -79,6 +79,7 @@ const buildTheStore = (arrayObjs) => {
                                 <a href="./backoffice.html?resourseId=${singleObj._id}">
                                 <button class="btn primary-modify text-light"> Modifica Dettagli </button></a>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -91,5 +92,3 @@ const triggerModal = () => {
         alert("L'item è stato correttamente eliminato.");
     }, 1000);
 };
-
-const availableProduct = () => {};
