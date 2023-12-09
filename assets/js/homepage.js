@@ -77,7 +77,7 @@ const buildTheStore = (arrayObjs) => {
                                 <a href="./phone-details.html?resourseId=${singleObj._id}"><button type="button" class="btn success-modify text-light w-50 moreInfo mb-2"> Scopri di più </button></a>
                                 <a href="./deletePage.html?resourseId=${singleObj._id}"><button type="button" class="btn danger-modify text-light w-50 moreInfo mb-2"> Cancella Item </button></a>
                                 <a href="./backoffice.html?resourseId=${singleObj._id}">
-                                <button class="btn primary-modify text-light"> Modifica Dettagli </button></a>
+                                <button class="btn primary-modify text-light w-50"> Modifica Dettagli </button></a>
                                 </div>
 
                             </div>
