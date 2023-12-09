@@ -11076,6 +11076,17 @@ textarea.form-control-lg {
 }
 
 @media screen and (min-width: 1px) {
+  body #main-container #main-row .col .this .secondoDiv {
+    max-width: auto;
+    font-size: large;
+  }
+}
+@media screen and (min-width: 768px) {
+  body #main-container #main-row .col .this .secondoDiv {
+    max-width: 200px;
+  }
+}
+@media screen and (min-width: 1px) {
   body #main-container #main-row .col .this .terzoDiv {
     width: 100% !important;
     height: 40% !important;

@@ -62,12 +62,12 @@ const buildTheStore = (arrayObjs) => {
         row.appendChild(col);
 
         col.innerHTML += `
-                    <div class="this">
+                    <div class="this text-center">
                         <div class= "d-md-flex justify-content-md-center align-items-md-center h-100 w-100">  
                             <div class="h-100">
                                 <img src="${singleObj.imageUrl}" class="card-img-top p-3 img-prop" alt="cellulare">
                             </div>
-                            <div class=" d-md-flex flex-md-column justify-content-md-center h-100 p-3 max-w-200 max-h-400">
+                            <div class="secondoDiv d-md-flex flex-md-column justify-content-md-center h-100 p-3 max-h-400">
                                 <h4 class="card-title">${singleObj.name}</h4>
                                 <h5 class="card-title">${singleObj.brand}</h5>
                                 <p class="card-text mt-1 overflow-auto">${singleObj.description}</p>

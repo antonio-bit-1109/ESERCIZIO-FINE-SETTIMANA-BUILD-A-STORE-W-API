@@ -136,6 +136,15 @@ body {
         #main-row {
             .col {
                 .this {
+                    .secondoDiv {
+                        @media screen and (min-width: 1px) {
+                            max-width: auto;
+                            font-size: large;
+                        }
+                        @media screen and (min-width: 768px) {
+                            max-width: 200px;
+                        }
+                    }
                     .terzoDiv {
                         @media screen and (min-width: 1px) {
                             width: 100% !important;
