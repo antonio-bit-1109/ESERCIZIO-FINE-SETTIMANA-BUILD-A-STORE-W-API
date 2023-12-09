@@ -11091,6 +11091,12 @@ body #main-container #main-row .col .this p {
 }
 body #main-container #main-row .col .this .terzoDiv button {
   padding: 1.5rem !important;
+  font-size: 1.5em !important;
+}
+@media screen and (min-width: 992px) {
+  body #main-container #main-row .col .this .terzoDiv button {
+    font-size: 1em !important;
+  }
 }
 @media screen and (min-width: 1px) {
   body #main-container #main-row .col .this .terzoDiv {
