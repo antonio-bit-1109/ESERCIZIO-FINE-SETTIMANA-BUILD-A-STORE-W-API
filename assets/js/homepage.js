@@ -91,3 +91,5 @@ const triggerModal = () => {
         alert("L'item è stato correttamente eliminato.");
     }, 1000);
 };
+
+const availableProduct = () => {};
