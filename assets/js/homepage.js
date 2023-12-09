@@ -68,10 +68,10 @@ const buildTheStore = (arrayObjs) => {
                                 <img src="${singleObj.imageUrl}" class="card-img-top p-3 img-prop" alt="cellulare">
                             </div>
                             <div class="secondoDiv d-md-flex flex-md-column justify-content-md-center h-100 p-3 max-h-400">
-                                <h4 class="card-title">${singleObj.name}</h4>
-                                <h5 class="card-title">${singleObj.brand}</h5>
+                                <h2 class="card-title">${singleObj.name}</h2>
+                                <h3 class="card-title">${singleObj.brand}</h3>
                                 <p class="card-text mt-1 overflow-auto">${singleObj.description}</p>
-                                <p class="card-text text-primary fw-bold fs-1">${singleObj.price} €</p>
+                                <p class="card-text text-primary fw-bold display-2">${singleObj.price} €</p>
                             </div>
                             <div class="p-2 d-md-flex flex-md-column terzoDiv h-100 justify-content-md-center">
                                 <a href="./phone-details.html?resourseId=${singleObj._id}"><button type="button" class="btn success-modify text-light w-50 moreInfo mb-2"> Scopri di più </button></a>
