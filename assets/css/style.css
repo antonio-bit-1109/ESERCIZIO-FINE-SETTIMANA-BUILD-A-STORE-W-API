@@ -11075,6 +11075,9 @@ textarea.form-control-lg {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#f10909",GradientType=1);
 }
 
+body #main-container #main-row .col .this p {
+  font-size: larger;
+}
 @media screen and (min-width: 1px) {
   body #main-container #main-row .col .this .secondoDiv {
     max-width: auto;

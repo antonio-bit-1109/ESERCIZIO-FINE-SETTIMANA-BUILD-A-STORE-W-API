@@ -136,6 +136,9 @@ body {
         #main-row {
             .col {
                 .this {
+                    p {
+                        font-size: larger;
+                    }
                     .secondoDiv {
                         @media screen and (min-width: 1px) {
                             max-width: auto;
