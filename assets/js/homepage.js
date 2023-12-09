@@ -63,17 +63,17 @@ const buildTheStore = (arrayObjs) => {
 
         col.innerHTML += `
                     <div class="this text-center">
-                        <div class= "d-md-flex justify-content-md-center align-items-md-center h-100 w-100">  
+                        <div class= "d-lg-flex justify-content-lg-center align-items-lg-center h-100 w-100">  
                             <div class="h-100">
                                 <img src="${singleObj.imageUrl}" class="card-img-top p-3 img-prop" alt="cellulare">
                             </div>
-                            <div class="secondoDiv d-md-flex flex-md-column justify-content-md-center h-100 p-3 max-h-400">
+                            <div class="secondoDiv d-lg-flex flex-lg-column justify-content-lg-center h-100 p-3 max-h-400">
                                 <h2 class="card-title">${singleObj.name}</h2>
                                 <h3 class="card-title">${singleObj.brand}</h3>
                                 <p class="card-text mt-1 overflow-auto">${singleObj.description}</p>
                                 <p class="card-text text-primary fw-bold display-2">${singleObj.price} €</p>
                             </div>
-                            <div class="p-2 d-md-flex flex-md-column terzoDiv h-100 justify-content-md-center">
+                            <div class="p-2 d-lg-flex flex-lg-column terzoDiv h-100 justify-content-lg-center">
                                 <a href="./phone-details.html?resourseId=${singleObj._id}"><button type="button" class="btn success-modify text-light w-50 moreInfo mb-2"> Scopri di più </button></a>
                                 <a href="./deletePage.html?resourseId=${singleObj._id}"><button type="button" class="btn danger-modify text-light w-50 moreInfo mb-2"> Cancella Item </button></a>
                                 <a href="./backoffice.html?resourseId=${singleObj._id}">

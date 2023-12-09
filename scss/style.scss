@@ -141,11 +141,14 @@ body {
                             max-width: auto;
                             font-size: large;
                         }
-                        @media screen and (min-width: 768px) {
+                        @media screen and (min-width: 992px) {
                             max-width: 250px;
                         }
                     }
                     .terzoDiv {
+                        button {
+                            padding: 1.5rem !important;
+                        }
                         @media screen and (min-width: 1px) {
                             width: 100% !important;
                             height: 40% !important;
@@ -153,6 +156,14 @@ body {
                         @media screen and (min-width: 992px) {
                             width: 25% !important;
                             height: 100% !important;
+                            button {
+                                padding: 0.6rem !important;
+                            }
+                        }
+                        @media screen and (min-width: 992px) {
+                            button {
+                                padding: 0.6rem !important;
+                            }
                         }
                     }
                 }

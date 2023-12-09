@@ -11081,10 +11081,13 @@ textarea.form-control-lg {
     font-size: large;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   body #main-container #main-row .col .this .secondoDiv {
     max-width: 250px;
   }
+}
+body #main-container #main-row .col .this .terzoDiv button {
+  padding: 1.5rem !important;
 }
 @media screen and (min-width: 1px) {
   body #main-container #main-row .col .this .terzoDiv {
@@ -11096,5 +11099,13 @@ textarea.form-control-lg {
   body #main-container #main-row .col .this .terzoDiv {
     width: 25% !important;
     height: 100% !important;
+  }
+  body #main-container #main-row .col .this .terzoDiv button {
+    padding: 0.6rem !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  body #main-container #main-row .col .this .terzoDiv button {
+    padding: 0.6rem !important;
   }
 }/*# sourceMappingURL=style.css.map */
