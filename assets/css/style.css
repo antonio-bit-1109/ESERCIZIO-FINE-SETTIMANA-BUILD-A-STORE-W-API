@@ -11075,16 +11075,15 @@ textarea.form-control-lg {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#f10909",GradientType=1);
 }
 
-body #main-container #main-row .col .this {
-  height: 100% !important;
-}
 @media screen and (min-width: 1px) {
   body #main-container #main-row .col .this .terzoDiv {
     width: 100% !important;
+    height: 40% !important;
   }
 }
 @media screen and (min-width: 992px) {
   body #main-container #main-row .col .this .terzoDiv {
     width: 25% !important;
+    height: 100% !important;
   }
 }/*# sourceMappingURL=style.css.map */

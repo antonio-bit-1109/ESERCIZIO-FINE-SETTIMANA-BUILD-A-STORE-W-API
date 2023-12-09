@@ -136,13 +136,14 @@ body {
         #main-row {
             .col {
                 .this {
-                    height: 100% !important;
                     .terzoDiv {
                         @media screen and (min-width: 1px) {
                             width: 100% !important;
+                            height: 40% !important;
                         }
                         @media screen and (min-width: 992px) {
                             width: 25% !important;
+                            height: 100% !important;
                         }
                     }
                 }

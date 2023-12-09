@@ -63,17 +63,17 @@ const buildTheStore = (arrayObjs) => {
 
         col.innerHTML += `
                     <div class="this">
-                        <div class= "d-flex justify-content-center align-items-center h-100 w-100">  
+                        <div class= "d-md-flex justify-content-md-center align-items-md-center h-100 w-100">  
                             <div class="h-100">
                                 <img src="${singleObj.imageUrl}" class="card-img-top p-3 img-prop" alt="cellulare">
                             </div>
-                            <div class=" d-flex flex-column justify-content-center h-100 p-3 max-w-200 max-h-400">
+                            <div class=" d-md-flex flex-md-column justify-content-md-center h-100 p-3 max-w-200 max-h-400">
                                 <h4 class="card-title">${singleObj.name}</h4>
                                 <h5 class="card-title">${singleObj.brand}</h5>
                                 <p class="card-text mt-1 overflow-auto">${singleObj.description}</p>
                                 <p class="card-text text-primary fw-bold fs-1">${singleObj.price} €</p>
                             </div>
-                            <div class="p-2 d-flex flex-column terzoDiv h-100 justify-content-center">
+                            <div class="p-2 d-md-flex flex-md-column terzoDiv h-100 justify-content-md-center">
                                 <a href="./phone-details.html?resourseId=${singleObj._id}"><button type="button" class="btn success-modify text-light w-50 moreInfo mb-2"> Scopri di più </button></a>
                                 <a href="./deletePage.html?resourseId=${singleObj._id}"><button type="button" class="btn danger-modify text-light w-50 moreInfo mb-2"> Cancella Item </button></a>
                                 <a href="./backoffice.html?resourseId=${singleObj._id}">
