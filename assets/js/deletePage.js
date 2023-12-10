@@ -32,6 +32,15 @@ window.addEventListener("DOMContentLoaded", () => {
 const deleteTheItem = (selectedObj, id) => {
     console.log(selectedObj);
 
+    const boxImg = document.getElementById("box-Img");
+    const img = document.createElement("img");
+    img.src = selectedObj.imageUrl;
+    img.classList.add("aspect-details-back-office", "p-3");
+    boxImg.appendChild(img);
+
+    const sottotitolo = document.getElementById("sottotitolo");
+    sottotitolo.innerHTML = `Stai per cancellare: <div class="fw-bold ms-1" > ${selectedObj.name} </div>`;
+
     const nameInput = document.getElementById("name");
     nameInput.value = selectedObj.name;
 
