@@ -1,4 +1,18 @@
+const spinnerLoading = () => {
+    const spinner = document.querySelector("#spinner");
+    spinner.innerHTML += `
+    <span class="visually-hidden">Loading...</span>
+    `;
+};
+
+const removeSpinner = () => {
+    const spinner = document.querySelector("#spinner");
+    spinner.classList.add("d-none");
+};
+
 window.addEventListener("DOMContentLoaded", () => {
+    spinnerLoading();
+
     URL = "https://striveschool-api.herokuapp.com/api/product/";
 
     const params = new URLSearchParams(window.location.search);
@@ -64,6 +78,8 @@ const deleteTheItem = (selectedObj, id) => {
             window.location.href = "homepage.html?alertId=100"; /* me lo riporta in homepage con alertId?? */
         }, 1200);
     });
+
+    removeSpinner();
 };
 
 const confirmDeleting = (id) => {
