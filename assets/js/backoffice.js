@@ -111,7 +111,7 @@ const modifyPropObj = (obj, id) => {
     console.log(btn_backOffice);
 
     const sottotitoloPage = document.getElementById("sottotitolo");
-    sottotitoloPage.innerHTML = `Stai modificando: ${obj.name}`;
+    sottotitoloPage.innerHTML = `Stai modificando: <div class="fw-bold m-1"> ${obj.name}</div>`;
 
     btn_backOffice.addEventListener("click", () => {
         putRequest(id, name, description, brand, price, indirizzoImg);
