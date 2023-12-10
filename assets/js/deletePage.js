@@ -10,6 +10,9 @@ const removeSpinner = () => {
     spinner.classList.add("d-none");
 };
 
+const loadingDOMStart = new Date().getTime();
+console.log("tempo iniziale", loadingDOMStart);
+
 window.addEventListener("DOMContentLoaded", () => {
     spinnerLoading();
 
@@ -76,10 +79,20 @@ const deleteTheItem = (selectedObj, id) => {
         confirmDeleting(id);
         setTimeout(() => {
             window.location.href = "homepage.html?alertId=100"; /* me lo riporta in homepage con alertId?? */
-        }, 1200);
+        }, time(tempoCaricamento));
     });
 
     removeSpinner();
+
+    const loadingDOMEnd = new Date().getTime();
+    console.log("tempo finale", loadingDOMEnd);
+
+    const tempoCaricamento = loadingDOMEnd - loadingDOMStart;
+    console.log("tempo caricamento", tempoCaricamento);
+
+    const time = (tempoCaricamento) => {
+        return tempoCaricamento + 500;
+    };
 };
 
 const confirmDeleting = (id) => {
