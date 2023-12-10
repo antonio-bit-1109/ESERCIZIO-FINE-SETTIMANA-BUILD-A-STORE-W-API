@@ -65,7 +65,7 @@ const createInfoPage = (GETobj) => {
     const infoBox = document.getElementById("infoBox");
     infoBox.innerHTML += `
     
-    <div>
+    <div class="p-3" >
         <h3 class="list-group-item fs-5">${GETobj.brand}</h3>
         <h1 class="list-group-item fs-2">${GETobj.name}</h1>
         <h3 class="list-group-item fs-4">${GETobj.description}</h3>
