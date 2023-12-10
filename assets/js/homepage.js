@@ -59,7 +59,7 @@ const getRequest = () => {
             /* implemento obj del GET nel DOM  */
             console.log(collection);
             buildTheStore(collection);
-            /* searchItems(collection); */
+            searchItems(collection);
         })
         .catch((error) => {
             console.error(" QUALCOSA NON VA", error);
@@ -75,7 +75,7 @@ const buildTheStore = (arrayObjs) => {
         const col = document.createElement("div");
 
         /* aggiungere _id alla colonna !!! */
-        col.classList.add("col", "m-3", "mt-7" /* `item-${singleObj._id}` */);
+        col.classList.add("col", "m-3", "mt-7", `item-${singleObj._id}`);
         row.appendChild(col);
 
         col.innerHTML += `
@@ -85,7 +85,7 @@ const buildTheStore = (arrayObjs) => {
                                 <img src="${singleObj.imageUrl}" class="card-img-top p-3 img-prop" alt="cellulare">
                             </div>
                             <div class="secondoDiv d-lg-flex flex-lg-column justify-content-lg-center h-100 p-3 max-h-400">
-                                <h2 class="card-title">${singleObj.name}</h2>
+                                <h2 class="card-title identity">${singleObj.name}</h2>
                                 <h3 class="card-title">${singleObj.brand}</h3>
                                 <p class="card-text mt-1 overflow-auto">${singleObj.description}</p>
                                 <p class="prezzo card-text text-primary fw-bold display-2">${singleObj.price} €</p>
@@ -111,25 +111,26 @@ const triggerModal = () => {
     }, 1000);
 };
 
-/* const searchItems = (collection) => {
+const searchItems = (collection) => {
     console.log(collection);
 
     const searchBar = document.querySelector("#searchBar");
     const buttonSearch = document.querySelector("#buttonSearch");
 
     buttonSearch.addEventListener("click", () => {
-        const searchTerm = searchBar.value;
+        const searchTerm = searchBar.value.toLowerCase();
 
         for (let i = 0; i < collection.length; i++) {
             let singleObj = collection[i];
 
             const colNode = document.querySelector(`.item-${singleObj._id}`);
-            const nameinCol = colNode.querySelector(".this .d-lg-flex .secondoDiv h2").textContent;
-            console.log(nameinCol);
+            const nameinCol = colNode.querySelector(".this .d-lg-flex .secondoDiv .identity").textContent.toLowerCase();
 
-            if (String(nameinCol.toLowerCase()) !== String(searchTerm.toLowerCase())) {
+            if (!nameinCol.includes(searchTerm)) {
                 colNode.classList.add("d-none");
+            } else {
+                colNode.classList.remove("d-none");
             }
         }
     });
-}; */
+};
