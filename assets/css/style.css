@@ -11043,6 +11043,11 @@ textarea.form-control-lg {
   max-height: 400px;
 }
 
+.aspect-details-back-office {
+  max-width: 250px;
+  max-height: 300px;
+}
+
 .max-h-400 {
   max-height: 400px;
 }

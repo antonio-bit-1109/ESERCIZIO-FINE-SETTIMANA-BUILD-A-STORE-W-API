@@ -83,6 +83,12 @@ const getRequest = (URL, id) => {
 };
 
 const modifyPropObj = (obj, id) => {
+    const containerImg = document.getElementById("containerImg");
+    const img = document.createElement("img");
+    img.src = obj.imageUrl;
+    img.classList.add("aspect-details-back-office", "p-3");
+    containerImg.appendChild(img);
+
     const name = document.getElementById("name");
     name.value = obj.name;
 
@@ -105,7 +111,7 @@ const modifyPropObj = (obj, id) => {
     console.log(btn_backOffice);
 
     const sottotitoloPage = document.getElementById("sottotitolo");
-    sottotitoloPage.textContent = "modifica-Oggetto";
+    sottotitoloPage.innerHTML = `Stai modificando: ${obj.name}`;
 
     btn_backOffice.addEventListener("click", () => {
         putRequest(id, name, description, brand, price, indirizzoImg);
