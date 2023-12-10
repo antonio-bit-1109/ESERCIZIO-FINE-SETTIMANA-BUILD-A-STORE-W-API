@@ -11088,6 +11088,16 @@ textarea.form-control-lg {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#f10909",GradientType=1);
 }
 
+@media screen and (min-width: 1px) {
+  body #main-container #main-row #barraDiRicerca {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  body #main-container #main-row #barraDiRicerca {
+    width: 50%;
+  }
+}
 body #main-container #main-row .col .this p:not(.prezzo) {
   font-size: larger;
 }

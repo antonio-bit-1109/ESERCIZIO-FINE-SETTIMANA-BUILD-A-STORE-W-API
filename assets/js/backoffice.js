@@ -29,6 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
         form.addEventListener("submit", (event) => {
             event.preventDefault();
             postRequest();
+            postedSuccessfully();
             form.reset();
             setTimeout(() => {
                 window.location.href = "homepage.html";
@@ -37,6 +38,13 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     removeSpinner();
 });
+
+postedSuccessfully = () => {
+    const sottotitolo = document.getElementById("sottotitolo");
+
+    sottotitolo.innerHTML = "Item creato correttamente!";
+    sottotitolo.classList.add("primary-modify", "p-2", "text-light", "w-50", "d-flex", "justify-content-center");
+};
 
 const postRequest = () => {
     const nome = document.getElementById("name");
