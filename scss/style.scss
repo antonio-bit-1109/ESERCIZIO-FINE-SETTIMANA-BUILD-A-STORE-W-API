@@ -22,6 +22,10 @@
     margin-top: 6rem !important;
 }
 
+.mt-10 {
+    margin-top: 9rem !important;
+}
+
 .aspect-details {
     max-width: 300px;
     max-height: 400px;
@@ -151,8 +155,8 @@ body {
                 @media screen and (min-width: 1px) {
                     width: 100%;
                 }
-                @media screen and (min-width: 768px) {
-                    width: 50%;
+                @media screen and (min-width: 992px) {
+                    width: 30%;
                 }
             }
             .col {

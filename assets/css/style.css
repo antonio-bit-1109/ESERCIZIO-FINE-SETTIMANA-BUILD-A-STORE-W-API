@@ -11038,6 +11038,10 @@ textarea.form-control-lg {
   margin-top: 6rem !important;
 }
 
+.mt-10 {
+  margin-top: 9rem !important;
+}
+
 .aspect-details {
   max-width: 300px;
   max-height: 400px;
@@ -11093,9 +11097,9 @@ textarea.form-control-lg {
     width: 100%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   body #main-container #main-row #barraDiRicerca {
-    width: 50%;
+    width: 30%;
   }
 }
 body #main-container #main-row .col .this p:not(.prezzo) {

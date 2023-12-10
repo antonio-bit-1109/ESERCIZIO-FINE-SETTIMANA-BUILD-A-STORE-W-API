@@ -75,7 +75,7 @@ const buildTheStore = (arrayObjs) => {
         const col = document.createElement("div");
 
         /* aggiungere _id alla colonna !!! */
-        col.classList.add("col", "m-3", "mt-7", `item-${singleObj._id}`);
+        col.classList.add("col", "m-3", "mt-10", `item-${singleObj._id}`);
         row.appendChild(col);
 
         col.innerHTML += `
