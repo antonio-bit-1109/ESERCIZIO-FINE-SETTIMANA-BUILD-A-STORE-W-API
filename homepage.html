@@ -16,6 +16,7 @@
                 <a class="navbar-brand text-light" href="homepage.html">
                     <i class="bi bi-bag text-light"></i> Shop Store
                 </a>
+
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -38,7 +39,20 @@
 
         <section id="main-container" class="container position-relative">
             <div id="spinner" class="spinner-border position-absolute top-0 mt-7" role="status"></div>
-            <div id="main-row" class="row row-cols-1"></div>
+            <div id="main-row" class="row row-cols-1">
+                <!-- search Bar -->
+                <div id="searchBar" class="container-fluid w-50 mt-8">
+                    <form class="d-flex" role="search">
+                        <input
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="cerchi qualcosa?"
+                            aria-label="Search"
+                        />
+                        <button id="buttonSearch" class="btn btn-outline-success" type="button">Search</button>
+                    </form>
+                </div>
+            </div>
         </section>
 
         <script

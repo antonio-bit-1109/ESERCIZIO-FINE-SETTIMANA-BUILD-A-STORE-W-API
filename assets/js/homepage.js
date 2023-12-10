@@ -59,6 +59,7 @@ const getRequest = () => {
             /* implemento obj del GET nel DOM  */
             console.log(collection);
             buildTheStore(collection);
+            /* searchItems(collection); */
         })
         .catch((error) => {
             console.error(" QUALCOSA NON VA", error);
@@ -72,7 +73,9 @@ const buildTheStore = (arrayObjs) => {
         let singleObj = arrayObjs[i];
 
         const col = document.createElement("div");
-        col.classList.add("col", "m-3", "mt-7");
+
+        /* aggiungere _id alla colonna !!! */
+        col.classList.add("col", "m-3", "mt-7" /* `item-${singleObj._id}` */);
         row.appendChild(col);
 
         col.innerHTML += `
@@ -107,3 +110,26 @@ const triggerModal = () => {
         alert("L'item è stato correttamente eliminato.");
     }, 1000);
 };
+
+/* const searchItems = (collection) => {
+    console.log(collection);
+
+    const searchBar = document.querySelector("#searchBar");
+    const buttonSearch = document.querySelector("#buttonSearch");
+
+    buttonSearch.addEventListener("click", () => {
+        const searchTerm = searchBar.value;
+
+        for (let i = 0; i < collection.length; i++) {
+            let singleObj = collection[i];
+
+            const colNode = document.querySelector(`.item-${singleObj._id}`);
+            const nameinCol = colNode.querySelector(".this .d-lg-flex .secondoDiv h2").textContent;
+            console.log(nameinCol);
+
+            if (String(nameinCol.toLowerCase()) !== String(searchTerm.toLowerCase())) {
+                colNode.classList.add("d-none");
+            }
+        }
+    });
+}; */
