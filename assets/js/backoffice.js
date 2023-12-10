@@ -43,7 +43,7 @@ postedSuccessfully = () => {
     const sottotitolo = document.getElementById("sottotitolo");
 
     sottotitolo.innerHTML = "Item creato correttamente!";
-    sottotitolo.classList.add("primary-modify", "p-2", "text-light", "w-50", "d-flex", "justify-content-center");
+    sottotitolo.classList.add("primary-modify", "p-2", "text-light");
 };
 
 const postRequest = () => {
