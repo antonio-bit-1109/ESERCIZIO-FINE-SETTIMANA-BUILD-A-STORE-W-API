@@ -1,4 +1,18 @@
+const spinnerLoading = () => {
+    const spinner = document.querySelector("#spinner");
+    spinner.innerHTML += `
+    <span class="visually-hidden">Loading...</span>
+    `;
+};
+
+const removeSpinner = () => {
+    const spinner = document.querySelector("#spinner");
+    spinner.classList.add("d-none");
+};
+
 window.addEventListener("DOMContentLoaded", () => {
+    spinnerLoading();
+
     const URL = "https://striveschool-api.herokuapp.com/api/product/";
 
     const params = new URLSearchParams(window.location.search);
@@ -71,4 +85,6 @@ const createInfoPage = (GETobj) => {
         <button class="btn primary-modify text-light"> Modifica Dettagli </button></a>
         </div>
     </div>`;
+
+    removeSpinner();
 };

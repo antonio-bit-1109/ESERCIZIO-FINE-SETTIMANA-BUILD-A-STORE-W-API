@@ -1,4 +1,18 @@
+const spinnerLoading = () => {
+    const spinner = document.querySelector("#spinner");
+    spinner.innerHTML += `
+    <span class="visually-hidden">Loading...</span>
+    `;
+};
+
+const removeSpinner = () => {
+    const spinner = document.querySelector("#spinner");
+    spinner.classList.add("d-none");
+};
+
 window.addEventListener("DOMContentLoaded", () => {
+    spinnerLoading();
+
     const params = new URLSearchParams(window.location.search);
     console.log("params", params);
 
@@ -85,6 +99,7 @@ const buildTheStore = (arrayObjs) => {
                     </div>
                     `;
     }
+    removeSpinner();
 };
 
 const triggerModal = () => {
